@@ -1,0 +1,4 @@
+demo/
+shots/
+__pycache__/
+*.log

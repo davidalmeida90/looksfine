@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LooksFine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23151617'/%3E%3Cpath d='M6 9 C10 20 14 22 26 23' stroke='%233987e5' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="#/">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" class="brand-bg"/><path d="M6 9 C10 20 14 22 26 23" class="brand-curve"/><circle cx="26" cy="23" r="2.6" class="brand-dot"/></svg>
+      <span><b>LooksFine</b><small>fine-tune runs</small></span>
+    </a>
+    <nav class="nav">
+      <a href="#/" data-nav="exp"><svg viewBox="0 0 20 20"><path d="M3 16h14M5 13l3-4 3 2 4-6"/></svg>Experiments</a>
+      <a href="#/jobs" data-nav="jobs"><svg viewBox="0 0 20 20"><path d="M4 5h12M4 10h12M4 15h8"/></svg>Jobs<span class="nav-badge" id="nav-running" hidden></span></a>
+      <a href="#/compare" data-nav="compare"><svg viewBox="0 0 20 20"><path d="M5 16V8M10 16V4M15 16v-6"/></svg>Compare</a>
+      <a href="#/final" data-nav="final"><svg viewBox="0 0 20 20"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>Final tests</a>
+      <a href="#/llm" data-nav="llm"><svg viewBox="0 0 20 20"><path d="M4 6h12M4 10h7M4 14h9"/><circle cx="15.5" cy="13.5" r="2.5"/></svg>LLM fine-tunes</a>
+      <a href="#/takes" data-nav="takes"><svg viewBox="0 0 20 20"><rect x="3" y="5" width="11" height="10" rx="2"/><path d="M14 9l3-2v6l-3-2"/></svg>Takes</a>
+    </nav>
+    <div class="demo-note" id="demo" hidden>Demo folder: synthetic data, made by make_demo.py</div>
+    <div class="side-foot">
+      <div class="sys" id="sys"></div>
+      <button class="theme" id="theme" type="button" aria-label="Toggle light or dark theme">
+        <svg viewBox="0 0 20 20"><path d="M10 3a7 7 0 1 0 7 7 5.5 5.5 0 0 1-7-7z"/></svg><span>Theme</span>
+      </button>
+    </div>
+  </aside>
+  <main class="main" id="main"><div class="loading">Loading runs…</div></main>
+</div>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
